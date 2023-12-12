@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 
 from dataclasses import dataclass
-from src.DimondPricePrediction.exception import customeexception
+from src.DimondPricePrediction.exception import customexception
 from src.DimondPricePrediction.logger import logging
 
 from sklearn.compose import ColumnTransformer
@@ -76,7 +76,7 @@ class DataTransformation:
         except Exception as e:
             logging.info("Exception occured in the initiate_datatransformation")
 
-            raise customeexception(e,sys)
+            raise customexception(e,sys)
             
     
     def initialize_data_transformation(self,train_path,test_path):
@@ -124,6 +124,6 @@ class DataTransformation:
         except Exception as e:
             logging.info("Exception occured in the initiate_datatransformation")
 
-            raise customeexception(e,sys)
+            raise customexception(e,sys)
             
     

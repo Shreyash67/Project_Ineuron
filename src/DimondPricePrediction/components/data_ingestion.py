@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from src.DimondPricePrediction.logger import logging
-from src.DimondPricePrediction.exception import customeexception
+from src.DimondPricePrediction.exception import customexception
 
 import os
 import sys
@@ -50,5 +50,5 @@ class DataIngestion:
 
         except Exception as e:
            logging.info("exception during occured at data ingestion stage")
-           raise customeexception(e,sys)
+           raise customexception(e,sys)
     
